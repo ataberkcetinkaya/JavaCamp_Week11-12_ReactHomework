@@ -1,30 +1,18 @@
 import './App.css';
-import 'semantic-ui-css/semantic.min.css'
-import Navigation from './layouts/Navigation';
-import SideMenu from './layouts/SideMenu';
-import GuestDashboard from './layouts/GuestDashboard';
-import GuestMenu from './layouts/GuestMenu';
-import UserMenu from './layouts/UserMenu';
-import UserDashboard from './layouts/UserDashboard';
-import { Container } from 'semantic-ui-react';
-
-
+import workImg from './assets/4thehomework.jpg';
+import { Signup } from './components/Signup';
 
 function App() {
   return (
-    <div className="App">
-      <Container>
-        <Navigation></Navigation>
-      </Container>
-      <Container className="main">
-        <SideMenu></SideMenu>
-      </Container>
-      <Container className="main">
-        <GuestDashboard></GuestDashboard>
-      </Container>
-      <GuestMenu></GuestMenu>
-      <UserMenu></UserMenu>
-      <UserDashboard></UserDashboard>
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-md-5">
+          <Signup />
+        </div>
+        <div className="col-md-7 my-auto">
+          <img className="img-fluid w-100" src={workImg} alt=""/>
+        </div>
+      </div>
     </div>
   );
 }
